@@ -1,0 +1,2 @@
+SELECT DISTINCT CourseID
+FROM Enrollments;
