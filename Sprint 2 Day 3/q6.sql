@@ -1,2 +1,3 @@
 ALTER TABLE employee
 MODIFY email VARCHAR(150);
+
