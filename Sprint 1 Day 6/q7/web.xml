@@ -1,0 +1,4 @@
+<context-param>
+    <param-name>appName</param-name>
+    <param-value>Student Portal</param-value>
+</context-param>
