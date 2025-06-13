@@ -1,0 +1,13 @@
+<servlet>
+    <servlet-name>ConfigServlet</servlet-name>
+    <servlet-class>ConfigServlet</servlet-class>
+    <init-param>
+        <param-name>institute</param-name>
+        <param-value>Nisum University</param-value>
+    </init-param>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ConfigServlet</servlet-name>
+    <url-pattern>/config</url-pattern>
+</servlet-mapping>
