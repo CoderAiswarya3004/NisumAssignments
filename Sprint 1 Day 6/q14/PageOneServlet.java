@@ -7,8 +7,10 @@ public class PageOneServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String name = request.getParameter("name");
+        String email = request.getParameter("email");
         HttpSession session = request.getSession();
         session.setAttribute("name", name);
+        session.setAttribute("email", email);
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
