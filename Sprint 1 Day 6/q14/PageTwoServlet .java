@@ -9,6 +9,7 @@ public class PageTwoServlet extends HttpServlet {
         String age = request.getParameter("age");
         HttpSession session = request.getSession();
         String name = (String) session.getAttribute("name");
+        String email = (String) session.getAttribute("email");
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
