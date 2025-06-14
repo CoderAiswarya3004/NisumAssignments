@@ -1,0 +1,15 @@
+.fancy-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fancy-btn:hover {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  transform: scale(1.1);
+}
