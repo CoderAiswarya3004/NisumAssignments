@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPA Content</title>
-    <link rel="stylesheet" href="q3.css">
+    <link rel="stylesheet" href="q3.css" />
 </head>
 <body>
     <header>
-        <h1>SPA Sections</h1>
+        <h1>SPA Content Example</h1>
     </header>
 
     <main>
         <section>
-            <h2>Heading Example</h2>
-            <h3>Subheading Level 3</h3>
-            <p>This is a paragraph demonstrating text formatting.</p>
-            <a href="#">Visit a Link</a>
+            <h2>Introduction</h2>
+            <h3>Getting Started</h3>
+            <p>Welcome to our single-page application example. This page demonstrates how to organize content using standard HTML elements.</p>
+            <a href="#contact">Jump to Contact Section</a>
         </section>
 
         <section>
-            <h2>Lists & Image</h2>
+            <h2>Technologies Used</h2>
+
+            <h3>Frontend Tools:</h3>
             <ul>
-                <li>Unordered Item 1</li>
-                <li>Unordered Item 2</li>
+                <li>HTML5 for structuring content</li>
+                <li>CSS3 for layout and design</li>
+                <li>JavaScript for dynamic behavior</li>
             </ul>
+
+            <h3>Steps to Build:</h3>
             <ol>
-                <li>Ordered Step 1</li>
-                <li>Ordered Step 2</li>
+                <li>Create an HTML layout with semantic tags</li>
+                <li>Add styles using an external CSS file</li>
+                <li>Use JavaScript to enable navigation or interactivity</li>
             </ol>
-            <img src="https://via.placeholder.com/300" alt="Sample Image" />
+
+            <img src="https://via.placeholder.com/300" alt="Illustration of front-end tools" />
         </section>
 
-        <section>
-            <h2>Contact Form</h2>
+        <section id="contact">
+            <h2>Contact Us</h2>
             <form>
-                <label>Name:</label><br />
-                <input type="text" required /><br />
-                <label>Email:</label><br />
-                <input type="email" required /><br />
-                <label>Message:</label><br />
-                <textarea></textarea><br />
-                <button type="submit">Send</button>
+                <label for="name">Your Name:</label><br />
+                <input type="text" id="name" name="name" required /><br /><br />
+
+                <label for="email">Email Address:</label><br />
+                <input type="email" id="email" name="email" required /><br /><br />
+
+                <label for="message">Your Message:</label><br />
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea><br /><br />
+
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
 </body>
 </html>
+
