@@ -1,34 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+}
 
-  <header>
-    <h1>Weather App</h1>
-    <input type="text" placeholder="Enter city..." id="cityInput" disabled />
-  </header>
+header {
+  background-color: #4a90e2; /* THIS gives blue */
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  <div class="weather-card">
-    <h2>New Delhi</h2>
-    <div class="weather-info">
-      <img src="https://openweathermap.org/img/wn/01d.png" alt="Sunny">
-      <p>32°C | Sunny and hot</p>
-    </div>
-  </div>
+header h1 {
+  margin: 0;
+}
 
-  <div class="weather-card">
-    <h2>London</h2>
-    <div class="weather-info">
-      <img src="https://openweathermap.org/img/wn/10d.png" alt="Rain">
-      <p>18°C | Light showers</p>
-    </div>
-  </div>
+#cityInput {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  font-size: 14px;
+}
 
-</body>
-</html>
+.weather-card {
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 20px 30px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.weather-info img {
+  width: 40px;
+  height: 40px;
+}
+
+
 
