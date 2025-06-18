@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loop Through Object</title>
+</head>
+<body>
+
+  <h2>User Info</h2>
+  <ul id="userDetails"></ul>
+
+  <script>
+    const user = {
+      name: "Alice",
+      age: 25,
+      email: "alice@example.com"
+    };
+
+    const list = document.getElementById("userDetails");
+
+    for (let key in user) {
+      const li = document.createElement("li");
+      li.textContent = `${key}: ${user[key]}`;
+      list.appendChild(li);
+    }
+  </script>
+
+</body>
+</html>
