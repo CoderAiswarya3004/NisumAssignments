@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dynamic List</title>
+  <style>
+    input {
+      padding: 6px;
+      margin-right: 10px;
+    }
+
+    ul {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Add Items to List</h2>
+  <input type="text" id="itemInput" placeholder="Enter item" />
+  <button onclick="addItem()">Add</button>
+
+  <ul id="itemList"></ul>
+
+  <script>
+    function addItem() {
+      const input = document.getElementById("itemInput");
+      const value = input.value.trim();
+
+      if (value !== "") {
+        const li = document.createElement("li");
+        li.textContent = value;
+        document.getElementById("itemList").appendChild(li);
+        input.value = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
