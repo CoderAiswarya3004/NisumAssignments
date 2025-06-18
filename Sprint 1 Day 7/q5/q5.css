@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: #4a90e2; /* THIS gives blue */
+  background-color: #4a90e2; 
   color: white;
   padding: 20px 40px;
   display: flex;
