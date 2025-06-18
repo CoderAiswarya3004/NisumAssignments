@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Class</title>
+</head>
+<body>
+
+  <h2>Open the Console to See Output</h2>
+
+  <script>
+    class Car {
+      constructor(brand, speed) {
+        this.brand = brand;
+        this.speed = speed;
+      }
+
+      accelerate() {
+        this.speed += 10;
+        console.log(`${this.brand} accelerated to ${this.speed} km/h`);
+      }
+    }
+
+    const myCar = new Car("Honda", 50);
+    myCar.accelerate();
+  </script>
+
+</body>
+</html>
