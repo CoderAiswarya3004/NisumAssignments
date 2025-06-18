@@ -1,50 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather App Layout</title>
-  <link rel="stylesheet" href="q5.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="app-header">
+  <header>
     <h1>Weather App</h1>
-    <input type="text" placeholder="Enter city..." class="city-input" />
+    <input type="text" placeholder="Enter city..." id="cityInput" disabled />
   </header>
 
-  <main>
-    <section class="weather-details">
-      <div class="weather-icon">🌤️</div>
-      <div class="weather-info">
-        <h2>New Delhi</h2>
-        <p>25°C | Sunny</p>
-      </div>
-    </section>
+  <div class="weather-card">
+    <h2>New Delhi</h2>
+    <div class="weather-info">
+      <img src="https://openweathermap.org/img/wn/01d.png" alt="Sunny">
+      <p>32°C | Sunny and hot</p>
+    </div>
+  </div>
 
-    <section class="forecast">
-      <div class="day-card">
-        <p>Mon</p>
-        <div>☁️</div>
-        <p>23°C</p>
-      </div>
-      <div class="day-card">
-        <p>Tue</p>
-        <div>🌧️</div>
-        <p>20°C</p>
-      </div>
-      <div class="day-card">
-        <p>Wed</p>
-        <div>🌤️</div>
-        <p>27°C</p>
-      </div>
-      <div class="day-card">
-        <p>Thu</p>
-        <div>☀️</div>
-        <p>29°C</p>
-      </div>
-    </section>
-  </main>
+  <div class="weather-card">
+    <h2>London</h2>
+    <div class="weather-info">
+      <img src="https://openweathermap.org/img/wn/10d.png" alt="Rain">
+      <p>18°C | Light showers</p>
+    </div>
+  </div>
 
-</body>
-</html>
