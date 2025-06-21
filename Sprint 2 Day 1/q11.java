@@ -12,10 +12,10 @@ interface B {
 
 public class Runner implements A, B {
     public void run() {
-        A.super.run(); // Resolving the conflict by choosing A's run()
+        A.super.run(); 
     }
 
     public static void main(String[] args) {
-        new Runner().run(); // Output: Running from A
+        new Runner().run(); 
     }
 }
