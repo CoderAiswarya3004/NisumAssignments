@@ -4,9 +4,9 @@ import java.util.stream.*;
 public class Q12 {
     public static void main(String[] args) {
         List<Employee> employees = List.of(
-            new Employee("John", "Male", 50000),
-            new Employee("Alice", "Female", 60000),
-            new Employee("Mike", "Male", 70000),
+            new Employee("Jitun", "Male", 50000),
+            new Employee("Alica", "Female", 60000),
+            new Employee("Micki", "Male", 70000),
             new Employee("Lily", "Female", 55000)
         );
 
