@@ -5,8 +5,8 @@ interface Operation {
 
 public class FlexibleOperation {
     public static void main(String[] args) {
-        performOperation((x, y) -> x + y); // Add
-        performOperation((x, y) -> x * y); // Multiply
+        performOperation((x, y) -> x + y); 
+        performOperation((x, y) -> x * y); 
     }
 
     static void performOperation(Operation op) {
