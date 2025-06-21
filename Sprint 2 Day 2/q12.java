@@ -6,7 +6,7 @@ public class Q12 {
         List<Employee> employees = List.of(
             new Employee("Jitun", "Male", 50000),
             new Employee("Alica", "Female", 60000),
-            new Employee("Micki", "Male", 70000),
+            new Employee("Micky", "Male", 70000),
             new Employee("Lily", "Female", 55000)
         );
 
