@@ -9,11 +9,11 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return null; // All config is in root
+        return null; 
     }
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] { "/" };  // Map all requests to DispatcherServlet
+        return new String[] { "/" };  
     }
 }
