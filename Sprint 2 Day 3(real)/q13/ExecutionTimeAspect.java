@@ -11,7 +11,7 @@ public class ExecutionTimeAspect {
     public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.currentTimeMillis();
 
-        Object result = joinPoint.proceed();  // actual method call
+        Object result = joinPoint.proceed();  
 
         long end = System.currentTimeMillis();
         System.out.println("Method " + joinPoint.getSignature() +
