@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List App</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    input { padding: 8px; width: 250px; }
+    button { padding: 8px 12px; margin-left: 10px; }
+    ul { margin-top: 20px; }
+    li { margin: 5px 0; }
+    .done { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+
+  <h2>Enhanced To-Do List App</h2>
+  <input type="text" id="taskInput" placeholder="Enter task" />
+  <button onclick="addTask()">Add</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    greet();
+    function greet() {
+      console.log("App initialized");
+    }
+
+    let todos = [];
+    let taskIdCounter = 1;
+
+    function createTask(desc) {
+      return {
+        id: taskIdCounter++,
+        description: desc,
+        completed: false
+      };
+    }
+
+    function addTask() {
+      let input = document.getElementById('taskInput');
+      let desc = input.value.trim();
+      if (desc === '') {
+        alert('Please enter a task.');
+        return;
+      }
+
+      let task = createTask(desc);
+      todos.push(task);
+      input.value = '';
+      renderTasks();
+    }
+
+    function renderTasks() {
+      let ul = document.getElementById('taskList');
+      ul.innerHTML = '';
+
+      for (let i = 0; i < todos.length; i++) {
+        let t = todos[i];
+        let li = document.createElement('li');
+        li.textContent = `${t.description}`;
+        li.setAttribute('data-id', t.id);
+        if (t.completed) li.classList.add('done');
+
+        li.onclick = function () {
+          toggleDone(t.id);
+        };
+
+        let delBtn = document.createElement('button');
+        delBtn.textContent = 'Delete';
+        delBtn.style.marginLeft = '10px';
+        delBtn.onclick = function (event) {
+          event.stopPropagation();
+          deleteTask(t.id);
+        };
+
+        li.appendChild(delBtn);
+        ul.appendChild(li);
+      }
+    }
+
+    function toggleDone(id) {
+      for (let i = 0; i < todos.length; i++) {
+        if (todos[i].id === id) {
+          todos[i].completed = !todos[i].completed;
+          break;
+        }
+      }
+      renderTasks();
+    }
+
+    function deleteTask(id) {
+      todos = todos.filter(task => task.id !== id);
+      renderTasks();
+    }
+
+    renderTasks();
+  </script>
+</body>
+</html>
+
