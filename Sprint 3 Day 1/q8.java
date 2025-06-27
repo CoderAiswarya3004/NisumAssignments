@@ -4,7 +4,7 @@ public class RetryWithBackoff {
 
     public static boolean performNetworkCall() throws Exception {
         Random random = new Random();
-        if (random.nextInt(10) < 7) { // 70% chance of failure
+        if (random.nextInt(10) < 7) { 
             throw new Exception("Network call failed.");
         }
         System.out.println("Network call succeeded!");
