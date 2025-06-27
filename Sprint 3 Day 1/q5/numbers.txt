@@ -1,0 +1,7 @@
+42
+7
+abc  // Invalid: triggers NumberFormatException
+5.5  // Invalid: decimal is not an integer
+100
+-12
+xyz // Invalid: triggers NumberFormatException
