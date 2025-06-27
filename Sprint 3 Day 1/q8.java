@@ -2,7 +2,6 @@ import java.util.Random;
 
 public class RetryWithBackoff {
 
-    // Simulated network call that randomly fails
     public static boolean performNetworkCall() throws Exception {
         Random random = new Random();
         if (random.nextInt(10) < 7) { // 70% chance of failure
