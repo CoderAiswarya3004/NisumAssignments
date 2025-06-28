@@ -84,13 +84,13 @@ public class MultiAccountTransfer {
         List<Thread> threads = new ArrayList<>();
         Random rand = new Random();
 
-        for (int i = 0; i < 6; i++) {  // 6 transfer threads
+        for (int i = 0; i < 6; i++) {  
             Account from = accounts.get(rand.nextInt(accounts.size()));
             Account to = accounts.get(rand.nextInt(accounts.size()));
             while (from == to) {
-                to = accounts.get(rand.nextInt(accounts.size())); // avoid self-transfer
+                to = accounts.get(rand.nextInt(accounts.size())); 
             }
-            int amount = 100 + rand.nextInt(400); // transfer ₹100–₹499
+            int amount = 100 + rand.nextInt(400); 
             threads.add(new TransferTask(from, to, amount));
         }
 
